@@ -1,0 +1,14 @@
+name: bkan0n
+
+services:
+  bkan0n:
+    image: nginx:1.27.3
+    container_name: bkan0n
+    volumes:
+      - /home/nebula/bkan0n/repos/bkan0n.com:/usr/share/nginx/html
+    restart: always
+
+networks:
+  default:
+    external: true
+    name: caddy-network

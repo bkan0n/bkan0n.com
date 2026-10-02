@@ -6,7 +6,7 @@ services:
     container_name: bkan0n
     volumes:
       - /home/nebula/bkan0n/repos/bkan0n.com:/usr/share/nginx/html
-    restart: always
+    restart: unless-stopped
     labels:
       logging: "promtail"
       logging_jobname: "containerlogs"
